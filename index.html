@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Революция 6G</title>
+  <link rel="stylesheet" href="./static/styles.css"/>
+</head>
+<body>
+  <!-- Новый блок с надписью -->
+  <div class="top-heading">Революция 6G</div>
+
+  <!-- Добавляем блок с параллаксом -->
+  <div class="parallax"></div>
+
+  <header class="top-bar">
+    <div class="header-left">
+      <!-- Кнопка с иконками Солнце/Луна -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+        <!-- Иконка «Солнце» -->
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2m6.28 1.72l-1.42 1.42M22 12h-2
+                   m-1.72 6.28l-1.42-1.42M12 22v-2
+                   M5.72 17.28l1.42-1.42M2 12h2
+                   m1.72-6.28l1.42 1.42" />
+        </svg>
+        <!-- Иконка «Луна» -->
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3
+                   a7 7 0 0 0 9.79 9.79Z" />
+        </svg>
+      </button>
+
+      <!-- Надпись «Мир 6G» (или можно убрать, если достаточно одной «Революция 6G») -->
+      <h1 class="site-title">Мир 6G</h1>
+    </div>
+
+    <!-- Бургер -->
+    <div class="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Навигационное меню (бургер) с якорями на секции -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#high-speed">Высокие скорости</a></li>
+        <li><a href="#low-latency">Минимальная задержка</a></li>
+        <li><a href="#massive-iot">Массовый Интернет вещей</a></li>
+        <li><a href="#ai-management">Управление на основе ИИ</a></li>
+        <li><a href="#microelectronics">Микроэлектроника</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Вводный текст -->
+  <section class="intro">
+    <div class="card">
+      <div class="section-content">
+        <h2>Что такое 6G?</h2>
+        <p>
+           6G — это следующее поколение мобильных сетей, которое обещает радикально изменить способы взаимодействия человека с технологиями. Эта новая парадигма коммуникации предоставит более высокую скорость передачи данных, минимальную задержку и возможности подключения миллиардов устройств по всему миру.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="floating-background"></div>
+  
+  <!-- Основные секции (карточки) -->
+  <main>
+    <section id="high-speed" class="section">
+      <div class="section-image">
+        <img src="/static/images/image1.jpg" alt="Высокие скорости">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Высокие частоты и невероятная скорость</h2>
+          <p>
+            6G открывает новую эру сверхбыстрой связи, предоставляя скорости передачи данных, превышающие возможности 5G в десятки раз. Используя частоты до 300 ГГц, сети нового поколения обеспечат передачу данных на уровне терабитов в секунду. Это означает, что стриминг видео в формате 16K, загрузка гигантских объемов данных или работа с голографическими изображениями станут мгновенными.
+            Чтобы достичь таких скоростей, инженеры разрабатывают микрочипы на базе инновационных материалов, включая GaN и InP, а также совершенствуют технологию фазированных антенн для повышения мощности передачи сигнала.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="low-latency" class="section">
+      <div class="section-image">
+        <img src="/static/images/image2.jpg" alt="Минимальная задержка">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Минимальная задержка</h2>
+          <p>Сети 6G обещают минимизировать задержку до менее 1 миллисекунды. Это создаст условия для применения технологий в реальном времени, таких как автономное вождение, дистанционная хирургия и тактические дроны.
+            Инфраструктура с минимальной задержкой станет возможной благодаря сочетанию новых алгоритмов управления трафиком, высокоскоростных чипсетов и искусственного интеллекта, который будет управлять распределением нагрузки в реальном времени</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="massive-iot" class="section">
+      <div class="section-image">
+        <img src="/static/images/image3.jpg" alt="Массовый Интернет вещей">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Массовый Интернет вещей</h2>
+          <p>6G — это основа для мира, где миллиарды устройств смогут беспрепятственно взаимодействовать друг с другом. От умных городов до подключенных заводов — каждое устройство станет частью общей сети.
+            Одной из ключевых задач является снижение энергопотребления этих устройств. Новые чипы, работающие на уровне 1 пДж/бит, позволят IoT-устройствам работать годами без подзарядки. Это обеспечит развитие умных домов, промышленного IoT и сельскохозяйственных решений, которые смогут функционировать автономно.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-management" class="section">
+      <div class="section-image">
+        <img src="/static/images/image4.jpg" alt="Управление на основе ИИ">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Управление на основе ИИ</h2>
+          <p>Искусственный интеллект будет играть центральную роль в управлении сетями 6G. Благодаря интеграции AI/ML алгоритмов сети смогут: анализировать и предсказывать трафик, автоматически регулировать мощность передатчиков, обеспечивать высокий уровень безопасности и защиты данных.
+            AI сделает сети гибкими и адаптивными к изменению нагрузки, что позволит оптимизировать их работу и снижать энергопотребление</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="microelectronics" class="section">
+      <div class="section-image">
+        <img src="/static/images/image5.jpg" alt="Микроэлектроника">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Микроэлектроника</h2>
+          <p>Развитие 6G невозможно без прорывов в области микроэлектроники. Новое поколение чипов, работающих на частотах до 300 ГГц, требует использования передовых материалов, таких как кремний, GaN и InP.
+            Европа активно инвестирует в производство микрочипов нового поколения в рамках инициативы «Чиповый акт». Основное внимание уделяется разработке интегрированных систем, которые объединяют радио- и цифровую обработку сигналов, а также повышают энергоэффективность</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Социальное меню -->
+    <div class="social-circle" onclick="toggleSocialMenu(event)">
+      <ul>
+        <li><a href="https://t.me/pin5632">Подлужнов Н.И.</a></li>
+        <li><a href="https://t.me/w0ooww">Лобосов Н.В.</a></li>
+        <li><a href="https://t.me/diimaaar">Арушанян Д.А.</a></li>
+      </ul>
+    </div>
+    <div id="chat-button-container">
+      <button id="chat-toggle">Чат</button>
+      <div id="chat-popup">
+          <iframe src="https://www.blackbox.ai/" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-row">
+    <!-- Видео 1 (слева) -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/AvcAovqG5Kk?si=8hLXXl6vApFo75eI"
+        frameborder="0" 
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen 
+        mozallowfullscreen 
+        allowFullScreen>
+      </iframe>
+    </div>
+    
+    <!-- Видео 2 (справа) -->
+    <div class="video-container">
+      <iframe 
+        src="https://rutube.ru/play/embed/454befef28560dbb9a506bead045136d/"
+        frameborder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen>
+      </iframe>
+    </div>
+  </div>
+  
+    <div id="progress-bar"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Революция 6G. Все права защищены.</p>
+  </footer>
+
+  <script src="./static/scripts.js" defer></script>
+</body>
+</html>
