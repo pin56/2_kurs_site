@@ -545,7 +545,49 @@ body.dark-theme .card {
     background-size: cover;        /* Масштабируем так, чтобы картинка занимала весь блок */
     background-attachment: fixed;  /* Параллакс-эффект (фон "закреплён" при прокрутке) */
     height: 100px;                 /* Фиксированная высота блока */
-    width: 100%;                   /* На всю ширину экрана */
+    width: 100%;                   
     margin: 0;
     padding: 0;
+  }
+
+  .responsive-video {
+    position: relative;
+    padding-bottom: 56.25%; /* Соотношение 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+  }
+
+  .video-container {
+    display: flex;             /* Используем Flexbox */
+    justify-content: center;   /* Горизонтальное выравнивание по центру */
+    align-items: center;       /* Вертикальное выравнивание (если нужно) */
+    margin: 20px 0;            /* Отступы сверху и снизу */
+  }
+
+  .video-row {
+    display: flex;           /* Flex-контейнер */
+    justify-content: space-between;  /* Расположение по горизонтали (слева и справа) */
+    flex-wrap: wrap;         /* Если экран маленький, видео перейдут на следующую строку */
+    gap: 1px;               /* Отступы между видео (не во всех браузерах старых работает) */
+    margin: 20px;            /* Внешний отступ контейнера */
+  }
+
+  /* Каждый блок под видео */
+  .video-container {
+    flex: 1 1 100%;           /* Каждое видео будет занимать примерно 50% ширины */
+    max-width: 560px;        /* Максимальная ширина, чтобы не «растягивать» iframe */
+    text-align: center;      /* Если нужно выравнивать сам iframe по центру */
+  }
+
+  iframe {
+    width: 100%;             /* iframe на всю ширину контейнера */
+    height: 315px;           /* фиксированная высота */
   }
