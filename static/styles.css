@@ -280,6 +280,7 @@ nav ul li a:hover {
     top: 0; /* Начальная позиция сверху */
     animation: fall 10s linear infinite; /* Падение вниз */
     will-change: transform, opacity;
+    filter: brightness(0.5) grayscale(20%);
 }
 
 .intro {
@@ -396,4 +397,105 @@ body.dark-theme .card {
   body.dark-theme .top-heading {
     background-color: #333;
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    /* Уменьшаем отступы хедера */
+    .top-bar {
+      padding: 0 10px;
+      height: auto; /* можно убрать фиксированную высоту */
+      flex-wrap: wrap; /* разрешаем перенос */
+      justify-content: space-between;
+    }
+  
+    /* Сайт-титл и бургер можно расположить в разных строчках */
+    .header-left,
+    .burger {
+      margin: 5px 0;
+    }
+  
+    /* Заголовок "Мир 6G" или "Революция 6G" пусть будет побольше, 
+       но при этом чтобы текст влезал */
+    .site-title {
+      font-size: 1.2rem;
+    }
+  
+    /* Бургер — чуть больше */
+    .burger {
+      width: 35px;
+      height: 28px;
+    }
+  
+    /* Скрываем или упрощаем пункты меню, 
+       если хотим, чтобы открывались в виде выпадающего списка */
+    .nav-menu {
+      width: 100%; /* Меню занимает всю ширину */
+      left: 0;     /* Позиционируем по левому краю */
+    }
+  
+    /* Адаптация секций (изображение + карточка) */
+    .section {
+      flex-direction: column; /* Стопкой сверху вниз */
+      align-items: stretch;   /* Растягиваем по всей ширине */
+      padding: 10px;          /* Минимальные поля */
+    }
+  
+    /* Изображение на всю ширину */
+    .section-image {
+      flex: 0 0 auto; /* Приостанавливаем жёсткий разме р */
+      width: 100%;
+      margin-bottom: 10px; /* Небольшой отступ от картинки до карточки */
+    }
+    .section-image img {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Карточка тоже на всю ширину */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    }
+    .card-intro {
+    max-width: 1200px;  /* или как вам нужно */
+    margin: 20px auto;  /* чтобы была отцентрованная */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: justify;
+    }
+
+    .card-intro .section-content h2 {
+    margin-top: 0; /* убрать лишний отступ сверху */
+    }
+    /* Текст в карточке можно чуть уменьшить */
+    .card .section-content p {
+      font-size: 0.95rem;
+    }
+  
+    /* В intro-секции уменьшаем отступы */
+    .intro {
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+  }
+  
+  /* 
+     "max-width: 480px" — еще более узкие экраны (многие смартфоны). 
+     Можно прописать более агрессивные настройки.
+  */
+  @media (max-width: 480px) {
+    .site-title {
+      font-size: 1rem; /* Чтобы точно влезало на экран */
+    }
+  
+    .card {
+      padding: 15px; /* Сократим поля внутри карточки */
+    }
   }
