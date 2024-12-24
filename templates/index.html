@@ -1,96 +1,149 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Революция 6G</title>
-    <link rel="stylesheet" href="/static/styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Революция 6G</title>
+  <link rel="stylesheet" href="./static/styles.css"/>
 </head>
 <body>
-    <header>
-        <h1>Революция 6G</h1>
-    </header>
-    <nav>
-        <div class="burger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <ul>
-            <li><a href="#high-speed">Высокие скорости</a></li>
-            <li><a href="#low-latency">Минимальная задержка</a></li>
-            <li><a href="#massive-iot">Массовый Интернет вещей</a></li>
-            <li><a href="#ai-management">Управление на основе ИИ</a></li>
-            <li><a href="#microelectronics">Микроэлектроника</a></li>
-        </ul>
+  <!-- Новый блок с надписью -->
+  <div class="top-heading">Революция 6G</div>
+
+  <header class="top-bar">
+    <div class="header-left">
+      <!-- Кнопка с иконками Солнце/Луна -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+        <!-- Иконка «Солнце» -->
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2m6.28 1.72l-1.42 1.42M22 12h-2
+                   m-1.72 6.28l-1.42-1.42M12 22v-2
+                   M5.72 17.28l1.42-1.42M2 12h2
+                   m1.72-6.28l1.42 1.42" />
+        </svg>
+        <!-- Иконка «Луна» -->
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3
+                   a7 7 0 0 0 9.79 9.79Z" />
+        </svg>
+      </button>
+
+      <!-- Надпись «Мир 6G» (или можно убрать, если достаточно одной «Революция 6G») -->
+      <h1 class="site-title">Мир 6G</h1>
+    </div>
+
+    <!-- Бургер -->
+    <div class="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Навигационное меню (бургер) с якорями на секции -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#high-speed">Высокие скорости</a></li>
+        <li><a href="#low-latency">Минимальная задержка</a></li>
+        <li><a href="#massive-iot">Массовый Интернет вещей</a></li>
+        <li><a href="#ai-management">Управление на основе ИИ</a></li>
+        <li><a href="#microelectronics">Микроэлектроника</a></li>
+      </ul>
     </nav>
-    <main>
-        <section id="high-speed" class="section">
-            <div class="section-content">
-                <h2>Высокие скорости</h2>
-                <p>6G обещает скорости передачи данных, превышающие возможности 5G в десятки раз. Это позволит загружать файлы огромных размеров за секунды, осуществлять трансляции в сверхвысоком разрешении без задержек и обеспечивать стабильное соединение в самых сложных условиях.</p>
-                <p>Технологии, лежащие в основе 6G, включают использование миллиметровых и терагерцовых волн, что открывает новые возможности для расширения пропускной способности сетей.</p>
-                <p>Дополнительное применение находится в области виртуальной и дополненной реальности, где требуется моментальная обработка больших объемов данных.</p>
-            </div>
-            <div class="section-image">
-                <img src="/static/images/image1.jpg" alt="Высокие скорости">
-            </div>
-        </section>
-        <section id="low-latency" class="section">
-            <div class="section-image">
-                <img src="/static/images/image2.jpg" alt="Минимальная задержка">
-            </div>
-            <div class="section-content">
-                <h2>Минимальная задержка</h2>
-                <p>Минимизация задержки связи — ключевая особенность 6G. Новые стандарты позволяют достигать времени отклика менее 1 миллисекунды, что критически важно для приложений в реальном времени, таких как автономное вождение или удаленные хирургические операции.</p>
-                <p>6G включает в себя технологии предсказательной маршрутизации, которые обеспечивают передачу данных по оптимальному пути, избегая перегрузок.</p>
-                <p>Задержки также уменьшаются благодаря интеграции вычислительных мощностей непосредственно в сетевые узлы.</p>
-            </div>
-        </section>
-        <section id="massive-iot" class="section">
-            <div class="section-content">
-                <h2>Массовый Интернет вещей</h2>
-                <p>6G станет основой для подключения миллиардов устройств. Это включает в себя умные города, автономные фабрики и системы экологического мониторинга.</p>
-                <p>Интеграция огромного числа сенсоров и устройств требует высокой энергоэффективности, что достигается за счет новых стандартов передачи данных и использования энергонезависимых компонентов.</p>
-                <p>Дополнительно, такие технологии, как mesh-сети, позволят устройствам напрямую обмениваться данными, снижая нагрузку на основные узлы.</p>
-            </div>
-            <div class="section-image">
-                <img src="/static/images/image3.jpg" alt="Массовый Интернет вещей">
-            </div>
-        </section>
-        <section id="ai-management" class="section">
-            <div class="section-image">
-                <img src="/static/images/image4.jpg" alt="Управление на основе ИИ">
-            </div>
-            <div class="section-content">
-                <h2>Управление на основе ИИ</h2>
-                <p>Искусственный интеллект играет центральную роль в управлении сетями 6G. Использование ИИ позволяет автоматизировать процессы настройки и оптимизации сети в реальном времени.</p>
-                <p>Это включает в себя предсказание потребностей в пропускной способности, обнаружение и устранение сбоев без участия человека.</p>
-                <p>ИИ также обеспечивает защиту сетей 6G от кибератак, анализируя поведение трафика и выявляя аномалии.</p>
-            </div>
-        </section>
-        <section id="microelectronics" class="section">
-            <div class="section-content">
-                <h2>Микроэлектроника</h2>
-                <p>Микроэлектроника играет ключевую роль в развитии 6G. Новые материалы и технологии производства микрочипов позволяют достичь высокой производительности при снижении энергопотребления.</p>
-                <p>Кроме того, интеграция ИИ в микросхемы открывает возможности для создания адаптивных систем связи, которые могут самостоятельно подстраиваться под изменения нагрузки.</p>
-                <p>Устойчивое производство и переработка компонентов также становятся важным аспектом, обеспечивая соответствие экологическим стандартам.</p>
-            </div>
-            <div class="section-image">
-                <img src="/static/images/image5.jpg" alt="Микроэлектроника">
-            </div>
-        </section>
-    </main>
+  </header>
+
+  <!-- Вводный текст -->
+  <section class="intro">
+    <h1>Добро пожаловать в мир 6G!</h1>
+    <p>
+      Уже сейчас ясно, что 6G станет следующим революционным этапом в развитии 
+      беспроводных технологий. Скорость, минимальная задержка, миллиарды умных 
+      устройств и искусственный интеллект...
+    </p>
+  </section>
+
+  <div class="floating-background"></div>
+  <!-- Основные секции (карточки) -->
+  <main>
+    <section id="high-speed" class="section">
+      <div class="section-image">
+        <img src="/static/images/image1.jpg" alt="Высокие скорости">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Высокие скорости</h2>
+          <p>6G обещает скорости передачи данных, превышающие возможности 5G в десятки раз...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="low-latency" class="section">
+      <div class="section-image">
+        <img src="/static/images/image2.jpg" alt="Минимальная задержка">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Минимальная задержка</h2>
+          <p>Минимизация задержки связи — ключевая особенность 6G. Новые стандарты позволяют...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="massive-iot" class="section">
+      <div class="section-image">
+        <img src="/static/images/image3.jpg" alt="Массовый Интернет вещей">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Массовый Интернет вещей</h2>
+          <p>6G станет основой для подключения миллиардов устройств. Это включает умные города...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-management" class="section">
+      <div class="section-image">
+        <img src="/static/images/image4.jpg" alt="Управление на основе ИИ">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Управление на основе ИИ</h2>
+          <p>Искусственный интеллект играет центральную роль в управлении сетями 6G. Использование ИИ...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="microelectronics" class="section">
+      <div class="section-image">
+        <img src="/static/images/image5.jpg" alt="Микроэлектроника">
+      </div>
+      <div class="card">
+        <div class="section-content">
+          <h2>Микроэлектроника</h2>
+          <p>Новые материалы и технологии производства микрочипов позволяют...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Социальное меню -->
     <div class="social-circle" onclick="toggleSocialMenu(event)">
         <ul>
-            <li><a href="https://t.me/podluzh">Подлужнов</a></li>
-            <li><a href="https://t.me/lobosov">Лобосов</a></li>
-            <li><a href="https://t.me/arushanyan">Арушанян</a></li>
+          <li><a href="https://t.me/podluzh">Подлужнов</a></li>
+          <li><a href="https://t.me/lobosov">Лобосов</a></li>
+          <li><a href="https://t.me/arushanyan">Арушанян</a></li>
         </ul>
-    </div>
+      </div>
+      <div id="progress-bar"></div>
+    </main>
+  
     <footer>
-        <p>&copy; 2024 Революция 6G. Все права защищены.</p>
+      <p>&copy; 2024 Революция 6G. Все права защищены.</p>
     </footer>
-    <script src="/static/scripts.js"></script>
-</body>
-</html>
+  
+    <script src="./static/scripts.js" defer></script>
+  </body>
+  </html>

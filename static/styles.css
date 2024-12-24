@@ -1,41 +1,173 @@
 body {
+    margin: 60px 0 0 0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    /* Установим плавный переход при переключении */
 }
-
 header {
     background-color: #0056b3;
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
 }
 
 nav {
     background-color: #003d80;
     padding: 10px 0;
-    position: relative;
 }
 
-nav ul {
+.section {
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2%;
+}
+
+.spacer {
+    flex: 0 0 10%; /* 10% пустого пространства */
+}
+
+.section-image {
+    flex: 0 0 20%; /* 20% для изображения */
+    text-align: center;
+    height: auto; /* Автоматическая подстройка высоты */
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Добавить немного стиля */
+}
+
+.card {
+    flex: 0 0 60%; /* 60% для текста */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    height: 100%; /* Карточка растягивается на высоту изображения */
+}
+
+.card .section-content h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #003d80;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.burger {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .burger div {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+
+.burger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0056b3;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    margin-left: 10px; /* Отступ от иконки */
+}
+
+
+/* Навигационное меню */
+.nav-menu {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    background-color: #003d80;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.nav-menu.active {
+    display: block; /* Отображаем меню */
+}
+
+.nav-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #003d80;
 }
+
+.nav-menu ul li {
+    padding: 10px 0;
+}
+
+.nav-menu ul li a {
+    color: white !important; /* Убедимся, что текст белый */
+    font-size: 18px; /* Сделаем текст достаточно большим */
+    text-decoration: none; /* Уберем подчеркивание */
+    display: block;
+}
+
+.nav-menu ul li a:hover {
+    color: yellow; /* Яркий цвет при наведении */
+}
+
 
 nav ul li {
     text-align: center;
@@ -48,23 +180,8 @@ nav ul li a {
     font-weight: bold;
 }
 
-.burger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    margin: 0 auto;
-    width: 30px;
-}
-
-.burger div {
-    background-color: #fff;
-    height: 4px;
-    margin: 5px 0;
-    width: 100%;
-}
-
-.burger.active + ul, nav ul.active {
-    display: flex;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 .social-circle {
@@ -73,22 +190,23 @@ nav ul li a {
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color: #0088cc;
+    background-color: #0088cc; /* Цвет фона кружка */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    z-index: 1000; /* Поверх всего остального */
 }
 
 .social-circle::after {
-    content: "";
+    content: ""; /* Вставляем иконку */
     display: block;
-    width: 40px;
+    width: 40px; /* Размер иконки */
     height: 40px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg');
-    background-size: contain;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg'); /* URL логотипа Telegram */
+    background-size: contain; /* Устанавливаем размер под контейнер */
     background-repeat: no-repeat;
 }
 
@@ -101,18 +219,18 @@ nav ul li a {
     right: 0;
     background-color: #0056b3;
     border-radius: 10px;
-    display: none;
+    display: none; /* Скрыто по умолчанию */
     flex-direction: column;
+    z-index: 1000;
 }
 
 .social-circle.active ul {
-    display: flex;
+    display: flex; /* Появляется при клике */
 }
 
 .social-circle ul li {
     text-align: left;
     padding: 10px;
-    position: relative;
 }
 
 .social-circle ul li a {
@@ -124,90 +242,158 @@ nav ul li a {
     text-decoration: underline;
 }
 
-main {
-    padding: 20px;
+#progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Изначально панель пустая */
+    height: 5px; /* Высота панели */
+    background-color: #007bff; /* Цвет панели */
+    z-index: 1000; /* Поверх остальных элементов */
+    transition: width 0.1s ease-out; /* Плавное увеличение ширины */
 }
 
-.section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.floating-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Иконки не мешают кликам */
+    z-index: -1;
+    overflow: hidden;
 }
 
-.section:nth-child(odd) {
-    flex-direction: row-reverse;
+@keyframes fall {
+    0% {
+        transform: translateY(-100%); /* Начинают за пределами экрана */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh); /* Уходят за нижний край экрана */
+        opacity: 0;
+    }
 }
 
-.section-content {
-    flex: 1 1 60%; /* Увеличение ширины текста */
-    max-width: 700px; /* Ограничение максимальной ширины */
+.floating-icon {
+    position: absolute;
+    top: 0; /* Начальная позиция сверху */
+    animation: fall 10s linear infinite; /* Падение вниз */
+    will-change: transform, opacity;
 }
 
-.section-image {
-    flex: 1 1 40%; /* Картинка занимает оставшееся пространство */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.section-image img {
-    max-width: 100%; /* Максимальная ширина изображения */
-    height: auto;
-    object-fit: contain; /* Сохранение пропорций */
-}
-
-footer {
-    background-color: #003d80;
-    color: #fff;
+.intro {
+    max-width: 800px;
+    margin: 40px auto; /* Отступ от верха */
+    padding: 0 20px;   /* Небольшие поля слева/справа */
     text-align: center;
+}
+
+.intro h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Кнопка переключения темы */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;       
+    color: inherit;        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    /* Если хотим, чтобы она была вплотную слева, убираем всякие отступы */
+    margin-right: 10px; 
+    padding: 0;
+}
+
+
+.sun-icon,
+.moon-icon {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s;
+}
+.moon-icon {
+  display: none;
+}
+
+
+body.dark-theme .sun-icon {
+    display: none;
+}
+
+
+body.dark-theme .moon-icon {
+    display: inline;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme {
+    background-color: #2b2b2b; /* Тёмный фон */
+    color: #e0e0e0;           /* Светлый текст */
+}
+
+/* Перекрашиваем хедер и меню */
+body.dark-theme header {
+    background-color: #333;
+    color: #eee;
+}
+
+body.dark-theme .nav-menu,
+body.dark-theme .burger div {
+    background-color: #444; 
+}
+
+body.dark-theme .nav-menu ul li a {
+    color: #ddd !important; 
+}
+
+body.dark-theme footer {
+    background-color: #333;
+    color: #ccc;
+}
+
+/* Перекрашиваем кнопку */
+body.dark-theme .theme-toggle {
+    color: #ccc;
+    border: 1px solid #ccc;
+}
+body.dark-theme .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Карточки тоже можно слегка осветлить */
+body.dark-theme .card {
+    background-color: #3c3c3c;
+    border: 1px solid #666;
+    color: #eee;
+}
+
+.top-heading {
+    width: 100%;
+    background-color: #f0f0f0;  /* Светло-серый фон (или любой другой) */
+    color: #000;               /* Цвет шрифта */
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
     padding: 10px 0;
-}
-.full-width-text {
-    flex: 1 1 100%;
-    max-width: none; /* Убираем ограничение ширины */
-}
-.section-image.hidden {
-    display: none; /* Скрываем картинку */
-}
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1100; /* Чтобы было поверх, если нужно */
+  }
 
-.section.square {
-    display: block; /* Текст занимает всю ширину */
-}
-
-.section.square .section-content {
-    width: 100%; /* Текстовый блок на всю ширину */
-    max-width: none;
-}
-
-.section.square .section-image {
-    display: none; /* Полностью скрываем изображение */
-}
-
-@media (max-width: 768px) {
-    .section {
-        display: flex;
-        flex-direction: column; /* Элементы в колонку */
-        align-items: center; /* Центрируем содержимое */
-        text-align: center; /* Текст по центру */
-    }
-
-    .section-content {
-        width: 100%; /* Текст занимает всю ширину */
-        max-width: 100%; /* Полностью растягивается */
-        padding: 10px; /* Уменьшаем отступы */
-    }
-
-    .section-image {
-        width: 100%; /* Картинка на всю ширину */
-        display: flex;
-        justify-content: center; /* Центрируем изображение */
-        padding: 10px; /* Добавляем отступ */
-    }
-
-    .section-image img {
-        max-width: 100%; /* Картинка не выходит за пределы */
-        height: auto; /* Сохраняем пропорции */
-    }
-}
+  body.dark-theme .top-heading {
+    background-color: #333;
+    color: #fff;
+  }
