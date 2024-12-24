@@ -103,7 +103,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.toggle('dark-theme');
     });
 
-    
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatPopup = document.getElementById("chat-popup");
+
+    chatToggle.addEventListener("click", () => {
+        chatPopup.style.display = chatPopup.style.display === "none" || chatPopup.style.display === "" ? "block" : "none";
+    });
 });
 
 

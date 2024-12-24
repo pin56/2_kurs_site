@@ -10,6 +10,9 @@
   <!-- Новый блок с надписью -->
   <div class="top-heading">Революция 6G</div>
 
+  <!-- Добавляем блок с параллаксом -->
+  <div class="parallax"></div>
+
   <header class="top-bar">
     <div class="header-left">
       <!-- Кнопка с иконками Солнце/Луна -->
@@ -69,6 +72,7 @@
   </section>
 
   <div class="floating-background"></div>
+  
   <!-- Основные секции (карточки) -->
   <main>
     <section id="high-speed" class="section">
@@ -80,8 +84,8 @@
           <h2>Высокие частоты и невероятная скорость</h2>
           <p>
             6G открывает новую эру сверхбыстрой связи, предоставляя скорости передачи данных, превышающие возможности 5G в десятки раз. Используя частоты до 300 ГГц, сети нового поколения обеспечат передачу данных на уровне терабитов в секунду. Это означает, что стриминг видео в формате 16K, загрузка гигантских объемов данных или работа с голографическими изображениями станут мгновенными.
-Чтобы достичь таких скоростей, инженеры разрабатывают микрочипы на базе инновационных материалов, включая GaN и InP, а также совершенствуют технологию фазированных антенн для повышения мощности передачи сигнала.
-        </p>
+            Чтобы достичь таких скоростей, инженеры разрабатывают микрочипы на базе инновационных материалов, включая GaN и InP, а также совершенствуют технологию фазированных антенн для повышения мощности передачи сигнала.
+          </p>
         </div>
       </div>
     </section>
@@ -140,19 +144,26 @@
 
     <!-- Социальное меню -->
     <div class="social-circle" onclick="toggleSocialMenu(event)">
-        <ul>
-          <li><a href="https://t.me/pin5632">Подлужнов Н.</a></li>
-          <li><a href="https://t.me/w0ooww">Лобосов Н.</a></li>
-          <li><a href="https://t.me/diimaaar">Арушанян Д.</a></li>
-        </ul>
+      <ul>
+        <li><a href="https://t.me/pin5632">Подлужнов Н.И.</a></li>
+        <li><a href="https://t.me/w0ooww">Лобосов Н.В.</a></li>
+        <li><a href="https://t.me/diimaaar">Арушанян Д.А.</a></li>
+      </ul>
+    </div>
+    <div id="chat-button-container">
+      <button id="chat-toggle">Чат</button>
+      <div id="chat-popup">
+          <iframe src="https://www.blackbox.ai/" frameborder="0"></iframe>
       </div>
-      <div id="progress-bar"></div>
-    </main>
-  
-    <footer>
-      <p>&copy; 2024 Революция 6G. Все права защищены.</p>
-    </footer>
-  
-    <script src="./static/scripts.js" defer></script>
-  </body>
-  </html>
+    </div>
+    
+    <div id="progress-bar"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Революция 6G. Все права защищены.</p>
+  </footer>
+
+  <script src="./static/scripts.js" defer></script>
+</body>
+</html>
