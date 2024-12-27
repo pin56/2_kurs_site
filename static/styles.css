@@ -541,7 +541,7 @@ body.dark-theme .card {
 }
 .parallax {
     /* Укажите корректный путь к файлу image6.jpg */
-    background: url("/static/images/image6.jpg") no-repeat center center;
+    background: url("./static/images/image6.jpg") no-repeat center center;
     background-size: cover;        /* Масштабируем так, чтобы картинка занимала весь блок */
     background-attachment: fixed;  /* Параллакс-эффект (фон "закреплён" при прокрутке) */
     height: 100px;                 /* Фиксированная высота блока */
